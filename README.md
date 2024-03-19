@@ -22,6 +22,8 @@
 * -o: output directory
 * -t: number of threads
 
+* Error corrected read data: SPAdes_error_correction_output/corrected/B04_S13_R1_001.00.0_0.cor.fastq, B04_S13_R2_001.00.0_0.cor.fastq
+
 # 3.Chromosome assembly
 
       spades.py --isolate -1 B04_S13_R1_001.fastq -2 B04_S13_R2_001.fastq --nanopore B04.fastq -o SPAdes_chromosome_assembly_output -t 60
