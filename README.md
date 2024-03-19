@@ -22,7 +22,7 @@
 * -o: output directory
 * -t: number of threads
 
-* Error corrected read data: SPAdes_error_correction_output/corrected/B04_S13_R1_001.00.0_0.cor.fastq, B04_S13_R2_001.00.0_0.cor.fastq
+* Error corrected read data: SPAdes_error_correction_output/corrected/B04_S13_R1_001.00.0_0.cor.fastq,B04_S13_R2_001.00.0_0.cor.fastq
 
 # 3.Chromosome assembly
 
