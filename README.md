@@ -33,8 +33,15 @@
 * -o: output directory
 * -t: number of threads
 
+* Assembled chromosome data: SPAdes_chromosome_assembly_output/contigs.fasta
+
 # 1.4 Plasmid assembly
 
     spades.py --plasmid -1 B04_S13_R1_001.fastq -2 B04_S13_R2_001.fastq --nanopore B04.fastq -o SPAdes_plasmid_assembly_output -t 60 
 
+* -1, -2: illumina data
+* --nanopore: nanopore data
+* -o: output directory
+* -t: number of threads
 
+* Assembled plasmid data: SPAdes_plasmid_assembly_output/contigs.fasta
