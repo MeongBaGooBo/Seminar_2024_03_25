@@ -54,6 +54,7 @@ Fasta 파일 내 첫 sequenc (가장 긴 서열) parsing
 Circulator tool은 BWA, Prodigal, Samtools, Mummer tool들을 필요로 하여 먼저 설치 후 path 설정해주어야 함.
 
 # 2.1 필요한 tool들 설치
+
 * BWA
   
       wget https://github.com/lh3/bwa/archive/refs/tags/v0.7.17.tar.gz
@@ -61,13 +62,11 @@ Circulator tool은 BWA, Prodigal, Samtools, Mummer tool들을 필요로 하여 �
       cd bwa-0.7.17/
       make
 
-
 *Prodigal
 
       wget https://github.com/hyattpd/Prodigal/releases/download/v2.6.3/prodigal.linux
       chmod 777 prodigal.linux
       mv prodigal.linux prodigal
-
 
 *Samtools
       
@@ -76,7 +75,6 @@ Circulator tool은 BWA, Prodigal, Samtools, Mummer tool들을 필요로 하여 �
       cd samtools-1.19.2
       ./configure
       make
-
 
 * Mummer
 
