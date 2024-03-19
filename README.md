@@ -3,6 +3,9 @@
 
 # Bacteria genome assembly
 
+* Illumina data: B04_S13_R1_001.fastq, B04_S13_R2_001.fastq
+* Nanopore data: B04.fastq
+
 1.SPAdes installation
 =
 
