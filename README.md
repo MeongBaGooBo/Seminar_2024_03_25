@@ -61,11 +61,13 @@ Circulator tool은 BWA, Prodigal, Samtools, Mummer tool들을 필요로 하여 �
       cd bwa-0.7.17/
       make
 
+
 *Prodigal
 
       wget https://github.com/hyattpd/Prodigal/releases/download/v2.6.3/prodigal.linux
       chmod 777 prodigal.linux
       mv prodigal.linux prodigal
+
 
 *Samtools
       
@@ -74,6 +76,7 @@ Circulator tool은 BWA, Prodigal, Samtools, Mummer tool들을 필요로 하여 �
       cd samtools-1.19.2
       ./configure
       make
+
 
 * Mummer
 
