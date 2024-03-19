@@ -35,6 +35,10 @@
 
 * Assembled chromosome data: SPAdes_chromosome_assembly_output/contigs.fasta
 
+Fasta 파일 내 첫 sequenc (가장 긴 서열) parsing
+
+    awk '/^>/{if(NR>1) exit; print; next} {if (!/^>/) print}' contigs.fasta > SPAdes_chromosome.fasta
+
 # 1.4 Plasmid assembly
 
     spades.py --plasmid -1 B04_S13_R1_001.fastq -2 B04_S13_R2_001.fastq --nanopore B04.fastq -o SPAdes_plasmid_assembly_output -t 60 
@@ -45,3 +49,76 @@
 * -t: number of threads
 
 * Assembled plasmid data: SPAdes_plasmid_assembly_output/contigs.fasta
+
+# 2. Circularization
+Circulator tool은 BWA, Prodigal, Samtools, Mummer tool들을 필요로 하여 먼저 설치 후 path 설정해주어야 함.
+
+# 2.1 필요한 tool들 설치
+* BWA
+  
+      wget https://github.com/lh3/bwa/archive/refs/tags/v0.7.17.tar.gz
+      tar -zxvf v0.7.17.tar.gz
+      cd bwa-0.7.17/
+      make
+
+*Prodigal
+
+      wget https://github.com/hyattpd/Prodigal/releases/download/v2.6.3/prodigal.linux
+      chmod 777 prodigal.linux
+      mv prodigal.linux prodigal
+
+*Samtools
+      
+      wget https://github.com/samtools/samtools/releases/download/1.19.2/samtools-1.19.2.tar.bz2
+      tar -jxvf samtools-1.19.2.tar.bz2
+      cd samtools-1.19.2
+      ./configure
+      make
+
+* Mummer
+
+      wget https://github.com/mummer4/mummer/releases/download/v4.0.0rc1/mummer-4.0.0rc1.tar.gz
+      tar -zxvf v4.0.0rc1.tar.gz
+      cd mummer-4.0.0rc1
+      make
+
+# 2.2 Circlator install
+
+      pip3 install circlator
+  
+# 2.3 Circularization by Circlator
+
+      circlator all --threads 8 SPAdes_chromosome.fasta B04.fastq Circlator
+      
+* --threads:  number of threads
+* SPAdes_chromosome.fasta: assembled genome sequence
+* B04.fastq: Nanopre data
+* Circlator: output directory
+
+* Output file인 04.merge.circularise.log 확인하여  circularization check
+* Circularised genome data: 06.fixstart.fasta
+
+# 3. Bacterial genome annotation
+Prokka 설치를 위해서 anaconda를 먼저 설치해주어야함.
+
+# 3.1 Anaconda install
+
+    wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
+    sh ./Anaconda3-2024.02-1-Linux-x86_64.sh
+    
+* 중간 중간 약관 확인 및 anaconda 설치 위치 등 입력해주어야 함.
+
+# 3.2 Prokka install
+
+    conda install -c conda-forge -c bioconda -c defaults prokka
+    
+# 3.3 Prokka DB setup
+
+    prokka --setupdb
+    
+# 3.4 Annotation by Prokka
+
+    prokka -outdir ./Prokka_output 06.fixstart.fasta
+    
+* 06.fixstart.fasta: circularised genome sequence
+* --outdir: output directory
