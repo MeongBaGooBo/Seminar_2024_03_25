@@ -7,12 +7,14 @@
 * Nanopore data: B04.fastq
 
 # 1.1 SPAdes installation
+
 SPAdes link: https://github.com/ablab/spades
 
     wget https://github.com/ablab/spades/releases/download/v3.15.5/SPAdes-3.15.5-Linux.tar.gz
     tar -xzf SPAdes-3.15.5-Linux.tar.gz
     cd SPAdes-3.15.5-Linux/bin/
     spades.py --test
+    
 * Path 설정
   
 # 1.2 Illumina read trimming
@@ -53,11 +55,13 @@ Fasta 파일 내 첫 sequence (가장 긴 서열) parsing
 
 # 2. Circularization
 Circulator tool은 BWA, Prodigal, Samtools, Mummer tool들을 필요로 하여 먼저 설치 후 path 설정해주어야 함.
+
 Circlator link: https://github.com/sanger-pathogens/circlator
 
 # 2.1 필요한 tool들 설치
 
 *BWA
+
 BWA link: https://github.com/lh3/bwa  
 
       wget https://github.com/lh3/bwa/archive/refs/tags/v0.7.17.tar.gz
@@ -66,6 +70,7 @@ BWA link: https://github.com/lh3/bwa
       make
 
 *Prodigal
+
 Prodigal link: https://github.com/hyattpd/Prodigal
 
       wget https://github.com/hyattpd/Prodigal/releases/download/v2.6.3/prodigal.linux
@@ -73,6 +78,7 @@ Prodigal link: https://github.com/hyattpd/Prodigal
       mv prodigal.linux prodigal
 
 *Samtools
+
 Samtools link: https://www.htslib.org/
       
       wget https://github.com/samtools/samtools/releases/download/1.19.2/samtools-1.19.2.tar.bz2
@@ -82,6 +88,7 @@ Samtools link: https://www.htslib.org/
       make
 
 *Mummer
+
 Mummer link: https://github.com/mummer4/mummer
 
       wget https://github.com/mummer4/mummer/releases/download/v4.0.0rc1/mummer-4.0.0rc1.tar.gz
@@ -107,9 +114,11 @@ Mummer link: https://github.com/mummer4/mummer
 
 # 3. Bacterial genome annotation
 Prokka 설치를 위해서 anaconda를 먼저 설치해주어야함.
+
 Prokka link: https://github.com/tseemann/prokka
 
 # 3.1 Anaconda install
+
 Anaconda linl: https://www.anaconda.com/
 
     wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
