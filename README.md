@@ -17,8 +17,8 @@ SPAdes link: https://github.com/ablab/spades
     
 * Path 설정
   
-# 1.2 Illumina read trimming
-    
+1.2 Illumina read trimming
+----    
     spades.py --only-error-correction -1 B04_S13_R1_001.fastq -2 B04_S13_R2_001.fastq -o SPAdes_error_correction_output -t 60
     
 * -1, -2: illumina data
@@ -27,8 +27,8 @@ SPAdes link: https://github.com/ablab/spades
 
 * Error corrected read data: SPAdes_error_correction_output/corrected/B04_S13_R1_001.00.0_0.cor.fastq,B04_S13_R2_001.00.0_0.cor.fastq
 
-# 1.3 Chromosome assembly
-
+1.3 Chromosome assembly
+----
       spades.py --isolate -1 B04_S13_R1_001.fastq -2 B04_S13_R2_001.fastq --nanopore B04.fastq -o SPAdes_chromosome_assembly_output -t 60
   
 * -1, -2: illumina data
@@ -42,8 +42,8 @@ Fasta 파일 내 첫 sequence (가장 긴 서열) parsing
 
     awk '/^>/{if(NR>1) exit; print; next} {if (!/^>/) print}' contigs.fasta > SPAdes_chromosome.fasta
 
-# 1.4 Plasmid assembly
-
+1.4 Plasmid assembly
+----
     spades.py --plasmid -1 B04_S13_R1_001.fastq -2 B04_S13_R2_001.fastq --nanopore B04.fastq -o SPAdes_plasmid_assembly_output -t 60 
 
 * -1, -2: illumina data
@@ -58,10 +58,11 @@ Circulator tool은 BWA, Prodigal, Samtools, Mummer tool들을 필요로 하여 �
 
 Circlator link: https://github.com/sanger-pathogens/circlator
 
-# 2.1 필요한 tool들 설치
+2.1 필요한 tool들 설치
+==
 
-* BWA
-
+BWA
+----
 BWA link: https://github.com/lh3/bwa  
 
       wget https://github.com/lh3/bwa/archive/refs/tags/v0.7.17.tar.gz
