@@ -7,6 +7,7 @@
 * Nanopore data: B04.fastq
 
 # 1.1 SPAdes installation
+SPAdes link: https://github.com/ablab/spades
 
     wget https://github.com/ablab/spades/releases/download/v3.15.5/SPAdes-3.15.5-Linux.tar.gz
     tar -xzf SPAdes-3.15.5-Linux.tar.gz
