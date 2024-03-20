@@ -60,7 +60,7 @@ Circlator link: https://github.com/sanger-pathogens/circlator
 
 # 2.1 필요한 tool들 설치
 
-*BWA
+* BWA
 
 BWA link: https://github.com/lh3/bwa  
 
@@ -69,7 +69,7 @@ BWA link: https://github.com/lh3/bwa
       cd bwa-0.7.17/
       make
 
-*Prodigal
+* Prodigal
 
 Prodigal link: https://github.com/hyattpd/Prodigal
 
@@ -77,7 +77,7 @@ Prodigal link: https://github.com/hyattpd/Prodigal
       chmod 777 prodigal.linux
       mv prodigal.linux prodigal
 
-*Samtools
+* Samtools
 
 Samtools link: https://www.htslib.org/
       
@@ -87,7 +87,7 @@ Samtools link: https://www.htslib.org/
       ./configure
       make
 
-*Mummer
+* Mummer
 
 Mummer link: https://github.com/mummer4/mummer
 
