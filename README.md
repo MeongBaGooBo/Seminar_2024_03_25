@@ -6,8 +6,8 @@
 * Illumina data: B04_S13_R1_001.fastq, B04_S13_R2_001.fastq
 * Nanopore data: B04.fastq
 
-# 1.1 SPAdes installation
-
+1.1 SPAdes installation
+----
 SPAdes link: https://github.com/ablab/spades
 
     wget https://github.com/ablab/spades/releases/download/v3.15.5/SPAdes-3.15.5-Linux.tar.gz
