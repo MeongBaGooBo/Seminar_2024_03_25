@@ -35,7 +35,7 @@
 
 * Assembled chromosome data: SPAdes_chromosome_assembly_output/contigs.fasta
 
-Fasta 파일 내 첫 sequenc (가장 긴 서열) parsing
+Fasta 파일 내 첫 sequence (가장 긴 서열) parsing
 
     awk '/^>/{if(NR>1) exit; print; next} {if (!/^>/) print}' contigs.fasta > SPAdes_chromosome.fasta
 
