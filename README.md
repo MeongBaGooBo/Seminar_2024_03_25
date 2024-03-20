@@ -59,10 +59,10 @@ Circulator tool은 BWA, Prodigal, Samtools, Mummer tool들을 필요로 하여 �
 Circlator link: https://github.com/sanger-pathogens/circlator
 
 2.1 필요한 tool들 설치
-==
+---
 
-BWA
-----
+* BWA
+
 BWA link: https://github.com/lh3/bwa  
 
       wget https://github.com/lh3/bwa/archive/refs/tags/v0.7.17.tar.gz
@@ -97,12 +97,12 @@ Mummer link: https://github.com/mummer4/mummer
       cd mummer-4.0.0rc1
       make
 
-# 2.2 Circlator install
-
+2.2 Circlator install
+--
       pip3 install circlator
   
-# 2.3 Circularization by Circlator
-
+2.3 Circularization by Circlator
+--
       circlator all --threads 8 SPAdes_chromosome.fasta B04.fastq Circlator
       
 * --threads:  number of threads
@@ -118,8 +118,8 @@ Prokka 설치를 위해서 anaconda를 먼저 설치해주어야함.
 
 Prokka link: https://github.com/tseemann/prokka
 
-# 3.1 Anaconda install
-
+3.1 Anaconda install
+--
 Anaconda linl: https://www.anaconda.com/
 
     wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
@@ -127,16 +127,16 @@ Anaconda linl: https://www.anaconda.com/
     
 * 중간 중간 약관 확인 및 anaconda 설치 위치 등 입력해주어야 함.
 
-# 3.2 Prokka install
-
+3.2 Prokka install
+--
     conda install -c conda-forge -c bioconda -c defaults prokka
     
-# 3.3 Prokka DB setup
-
+3.3 Prokka DB setup
+--
     prokka --setupdb
     
-# 3.4 Annotation by Prokka
-
+3.4 Annotation by Prokka
+--
     prokka -outdir ./Prokka_output 06.fixstart.fasta
     
 * 06.fixstart.fasta: circularised genome sequence
