@@ -142,6 +142,9 @@ Anaconda linl: https://www.anaconda.com/
 * 06.fixstart.fasta: circularised genome sequence
 * --outdir: output directory
 
-# 4. Genome visualization
+# 4. Copying files to my computer
 
-Proksee link: https://proksee.ca/
+scp -r -P 2222 Prokka_output /Users/seongminkim/Desktop
+
+* -r: directory copying
+* -P: port number 
