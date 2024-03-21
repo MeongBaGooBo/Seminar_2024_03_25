@@ -110,6 +110,7 @@ Mummer link: https://github.com/mummer4/mummer
 * B04.fastq: Nanopre data
 * Circlator: output directory
 
+
 * Output file인 04.merge.circularise.log 확인하여  circularization check
 * Circularised genome data: 06.fixstart.fasta
 
