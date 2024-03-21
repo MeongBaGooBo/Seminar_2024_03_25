@@ -144,7 +144,7 @@ Anaconda linl: https://www.anaconda.com/
 
 # 4. Copying files to my computer
 
-scp -r -P 2222 Prokka_output /Users/seongminkim/Desktop
+    scp -r -P 2222 Prokka_output /Users/seongminkim/Desktop
 
 * -r: directory copying
 * -P: port number 
