@@ -29,7 +29,7 @@ SPAdes link: https://github.com/ablab/spades
 
 1.3 Chromosome assembly
 ----
-      spades.py --isolate -1 B04_S13_R1_001.fastq -2 B04_S13_R2_001.fastq --nanopore B04.fastq -o SPAdes_chromosome_assembly_output -t 60
+    spades.py --isolate -1 B04_S13_R1_001.fastq -2 B04_S13_R2_001.fastq --nanopore B04.fastq -o SPAdes_chromosome_assembly_output -t 60
   
 * -1, -2: illumina data
 * --nanopore: nanopore data
