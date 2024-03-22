@@ -95,6 +95,7 @@ Mummer link: https://github.com/mummer4/mummer
       wget https://github.com/mummer4/mummer/releases/download/v4.0.0rc1/mummer-4.0.0rc1.tar.gz
       tar -zxvf v4.0.0rc1.tar.gz
       cd mummer-4.0.0rc1
+      ./configure
       make
 
 2.2 Circlator install
