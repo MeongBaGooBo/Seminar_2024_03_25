@@ -103,7 +103,7 @@ Mummer link: https://github.com/mummer4/mummer
   
 2.3 Circularization by Circlator
 --
-      circlator all --threads 8 SPAdes_chromosome.fasta B04.fastq Circlator
+    circlator all --threads 8 SPAdes_chromosome.fasta B04.fastq Circlator
       
 * --threads:  number of threads
 * SPAdes_chromosome.fasta: assembled genome sequence
