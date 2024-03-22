@@ -71,7 +71,12 @@ BWA link: https://github.com/lh3/bwa
       tar -zxvf v0.7.17.tar.gz
       cd bwa-0.7.17/
       make
-
+또는 
+       
+    git clone https://github.com/lh3/bwa.git
+    cd bwa
+    make
+    
 * Prodigal
 
 Prodigal link: https://github.com/hyattpd/Prodigal
