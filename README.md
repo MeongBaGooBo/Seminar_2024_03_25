@@ -1,6 +1,8 @@
 # Seminar_2024_03_25
 * Bacteria genome assembly and annotation
 
+      git clone https://github.com/MeongBaGooBo/Seminar_2024_03_25.git
+  
 # 1.Bacteria genome assembly
 
 * Illumina data: B04_S13_R1_001.fastq, B04_S13_R2_001.fastq
