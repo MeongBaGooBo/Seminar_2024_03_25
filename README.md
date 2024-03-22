@@ -146,7 +146,7 @@ Anaconda linl: https://www.anaconda.com/
     
 3.4 Annotation by Prokka
 --
-    prokka -outdir ./Prokka_output 06.fixstart.fasta
+    prokka -outdir ./Prokka_output 06.fixstart.fasta --cpus 60
     
 * 06.fixstart.fasta: circularised genome sequence
 * --outdir: output directory
